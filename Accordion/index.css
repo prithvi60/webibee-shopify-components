@@ -23,14 +23,14 @@ body {
   margin: 0 auto;
 }
 
-section{
+section {
   height: 50vh;
   width: 600px;
   padding: 50px;
-  border: 3px solid;
+  /* border: 3px solid; */
 }
 
-.accordionWrapper{
+.accordionWrapper {
   cursor: pointer;
   font-size: 14px;
   min-width: 300px;
@@ -50,12 +50,12 @@ section{
   width: 100%;
 }
 
-.bodyWrapper{
+.bodyWrapper {
   max-height: 0px;
   overflow: hidden;
   transition: max-height 0.2s;
 }
-.content{
+.content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,8 +73,52 @@ section{
   max-height: 500px;
 }
 
+.border {
+  border-bottom: 2px solid rgba(180, 172, 172, 0.609);
+}
 
-.fa-solid.active{
+.fa-solid.active {
   transform: rotate(-180deg);
 }
 
+.btn-content {
+  display: block;
+  padding: 20px;
+}
+
+.btn-container {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn-content h3 {
+  color: rgba(152, 152, 152, 0.859);
+}
+
+.btn-content button {
+  padding: 20px;
+  box-shadow: 2px 5px 8px rgba(48, 48, 48, 0.456);
+  border-radius: 10px;
+  border: 1px solid #029402d2;
+  cursor: pointer;
+}
+
+button:hover {
+  color: green;
+  background-color: rgba(7, 219, 7, 0.424);
+}
+
+.pending {
+  text-decoration: line-through;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    width: 100vw;
+    padding: 20px;
+  }
+  .accordionWrapper {
+    font-size: 12px;
+  }
+}
